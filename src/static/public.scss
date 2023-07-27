@@ -1,0 +1,52 @@
+@mixin box($w:auto,$h:auto,$background:#fff,$borderRadius:20rpx){
+	width: $w;
+	height: $h;
+	background: $background;
+	border-radius: $borderRadius;
+}
+@mixin flex{
+	display: flex;
+	align-items: center;
+}
+@mixin space-between{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+@mixin flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin fx-1{
+	flex:1;
+}
+@mixin shrink{
+	flex-shrink: 0;
+}
+@mixin whb($w,$h,$b){
+	width: $w;
+	height: $h;
+	background-color: $b;
+}
+@mixin font($size,$color){
+	font-size: $size;
+	color: $color;
+}
+
+.line-one{//文本超出一行 显示省略号
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.line-two{//文本超出两行 显示省略号
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
